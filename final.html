@@ -1,0 +1,976 @@
+<html>
+<head>
+<title>QUICK_INQUIRY</title>
+  
+ 	<style>
+    .static-page
+    {
+        width: 83%;
+        margin-left: 8.5%;
+        margin-right: 8.5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 680px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 2px;
+        padding: 1%;
+        box-shadow: 0px 0px 10px #003366;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 80px;
+    }
+  
+    .div1
+	{
+		position:relative;
+        left:20px;
+        top:20px;
+		width: 350px;
+		height: 250px;
+		border-style: solid;
+        border-color: #003366;
+        border-width: 2px 2px 2px 2px;
+		border-top-left-radius: 10px 10px;
+        overflow: auto;
+	}
+		
+	.div2
+	{
+		position:relative;
+		left: 370px;
+        top:-230px;
+		width: 350px;
+		height: 250px;
+		border-style: solid;
+        border-color: #003366;
+        border-width: 2px 2px 2px 2px;
+		border-top-right-radius: 10px 10px;
+        overflow: auto;
+    }
+
+	.div3
+	{
+		position:relative;
+		top: -230px;
+        left:20px;
+		width: 350px;
+		height: 250px;
+		border-style: solid;
+        border-color: #003366;
+        border-width: 2px 2px 2px 2px;
+		border-bottom-left-radius: 10px 10px;
+		overflow: auto;
+	}
+		
+	.div4
+	{
+		position:relative;
+		left:370px;
+		top: -480px;
+		width: 350px;
+		height: 250px;
+		border-style: solid;
+        border-color: #003366;
+        border-width: 2px 2px 2px 2px;
+		border-bottom-right-radius: 10px 10px;
+		overflow: auto;
+	}
+	
+	.div5
+	{
+		position:relative; 
+		left:790px;
+		top: -770px;
+		width: 200px;
+		height: 200px;
+        border-style:solid;
+        border-color: #003366;
+        font-size: 15px;
+        border-width: 2px 2px 2px 2px;
+	    border-radius:100px;
+		cursor:pointer;
+        background-color: #003366;
+    }
+    
+    .div5:active
+    {
+        background-color: #ccd6e0;
+    }
+        
+    .div6
+    {
+        position: relative;
+        margin: 17px;
+        margin-left: 25px;
+    }
+    
+    .div7
+    {
+        position: relative;
+       	top: -710px;
+        left: 785px;
+        width: 200px;
+    }
+      
+    .div8
+    {
+        position: relative;
+        left: 770px;
+        top: -1400px;
+        width: 250px;
+        height: 150px;
+        font-family: 'Poiret One', cursive;
+        font-size: 48px;
+        border-bottom-style: solid;
+        border-top-style: solid;
+        color: #003366;
+        border-color: #003366;
+        color: aliceblue;
+    }     
+	
+	.div9
+    {
+        position:relative; 
+        left:160px;
+		top: -790px;
+		font-family: 'Poiret One', cursive;
+        width: 450px;
+		height: 70px;
+        border-style: solid;
+        border-color: #003366;
+        border-width: 2px 2px 2px 2px;
+		border-radius: 50px 50px;
+        background-color:  rgb(227, 227, 227);
+    }
+		
+    * 
+    {
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
+	}
+
+	body 
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	ul 
+	{
+		margin: 30px auto;
+		text-align: center;
+	}
+
+	li 
+	{
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+
+	@-moz-keyframes rotate 
+	{
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-webkit-keyframes rotate 
+	{
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-o-keyframes rotate 
+	{
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@keyframes rotate 
+	{
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	.round 
+	{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 30px;		
+		text-decoration: none;		
+		text-align: center;
+		font-size: 25px;		
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+		letter-spacing: -.065em;
+		font-family: 'Poiret One', cursive;
+        -webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+		border-radius: 300px;
+		z-index: 1;
+		border-width: 4px;
+		border-style: solid;
+    }
+
+	.round:hover 
+	{
+		width: 130%;
+		height: 130%;
+		left: -15%;
+		top: -15%;
+		font-size: 33px;
+		padding-top: 38px;
+		-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		z-index: 2;
+		border-size: 10px;
+		-webkit-transform: rotate(-360deg);
+		-moz-transform: rotate(-360deg);
+		-o-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+
+	a.green 
+	{
+		background-color: #abc322;
+		color: #ffffff;
+		border-color: #abc322;
+	}
+
+	a.green:hover 
+	{
+		color: #abc322;
+	}
+
+	.round span.round 
+	{
+		display: block;
+		opacity: 0;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+		font-size: 1px;
+		border: none;
+		padding: 40% 20% 0 20%;
+		color: #fff;
+	}
+
+	.round span:hover 
+	{
+		opacity: .85;
+		font-size: 16px;
+		-webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+	}
+
+	.green span 
+	{
+		background: #abc322;		
+	}
+  
+    .tag
+    {
+        background-color:#003366;;
+        position: relative;
+        margin-left: 50px;
+        margin-top: 0px;
+        margin-right: 50px;
+        color: white;
+        border-style: solid;
+        font-family: 'Poiret One', cursive;
+        border-width: 2px 2px 2px 2px;
+		border-bottom-left-radius: 10px 10px;
+        border-bottom-right-radius: 10px 10px;
+    }
+        
+        
+    .tag1
+    {
+        position: relative;
+        margin-left: 50px;
+        margin-top: 0px;
+        margin-right: 50px;
+        color:#003366;
+        width: auto;
+        height: auto;
+    }
+
+    .button
+    {
+       background-color:#333;
+        position: relative;
+        margin-left: 80px;
+        margin-top: 180px;
+        margin-right:80px;
+        color: white;
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-top-left-radius: 10px 10px;
+        border-top-right-radius: 10px 10px;
+		border-bottom-left-radius: 10px 10px;
+        border-bottom-right-radius: 10px 10px;
+        cursor: pointer;
+    }
+
+    input:placeholder-shown
+    {
+        font: verdana;
+        text-align: center;
+        border-color: #003366;
+        font-family: 'Poiret One', cursive;
+        color:#003366;
+        
+    }
+        
+   .tag2
+    {
+        margin-top: 8px;
+    }
+    .title
+    {
+        color: #003366;
+    }
+       
+</style>
+</head>
+<body>
+    <div class="static-page">
+		<div class="div1" id="div1">
+        	<div class="tag" id="div11"><h2><center>Budget</center></h2></div>
+      	</div> 
+		<div class="div2" id="div2">
+        	<div class="tag"><h2><center>Premium</center></h2></div>
+       	</div>
+		<div class="div3" id="div3">
+        	<div class="tag"><h2><center>HighEnd</center></h2></div>
+       	</div>
+		<div class="div4" id="div4">
+        	<div class="tag"><h2><center>Third Grade</center></h2></div>
+      	</div>
+		<div class="div5" id="div5"><br><br>
+       		<div class="div6">
+        		<form id="f1">
+           			<table>
+           				<tr>
+            			<td><input list="size" id="size1" placeholder="Size" style="max-width:70%" required> 
+            					<datalist id="size">
+				                    <option value="200x200">
+								    <option value="200x600">
+								    <option value="300x300">
+				                    <option value="300x600">
+								    <option value="300x900">
+				                    <option value="400x400">
+								    <option value="600x600">
+								    <option value="600x1200">
+				                    <option value="800x1200">
+								    <option value="1000x2000">
+				                    <option value="200x300">
+								    <option value="250x375">
+								    <option value="300x450">
+				                    <option value="300x750">
+								    <option value="300x1200">
+				                    <option value="400x800">
+								    <option value="600x900">
+								    <option value="800x800">
+				                    <option value="1000x1000">
+								</datalist></td>
+               			</tr>
+        
+               			<tr>
+            			<td><input list="pc" id="pc1" placeholder="Product Category" style="max-width:70%" required>
+            					<datalist id="pc">
+				                    <option value="Ceramic Wall">
+								    <option value="Ceramic/Semi-Porcelian Floor">
+								    <option value="SST/Vitrified Nano">
+				                    <option value="Double charge/Multi charge Nano(DC)">
+								    <option value="Vetrified Glazed Tile(GVT)">
+				                    <option value="Polished Glazed Vetrified Nano(PGVT)">
+								    <option value="Color Body">
+								    <option value="Stone/Kota Marble & granites">
+				                    <option value="Combo Plan">
+								    <option value="Slim Tile">
+				                    <option value="Raw Material">
+								</datalist></td>
+               			</tr>
+                
+                		<tr>
+                		<td><input list="ff" id="ff1" placeholder="Feel/Finish" style="max-width:70%" required> 
+                				<datalist id="ff">
+				                    <option value="Glossy">
+								    <option value="Special Protection Coat">
+								    <option value="Matt/Suede/Honed">
+				                    <option value="Polished Glossy">
+								    <option value="Rustic/Rough Surface">
+				                    <option value="Luster">
+								    <option value="Metallic">
+								    <option value="Glazed Polish Nano / Half Polished">
+				                    <option value="Lapato/ Sugar /Leather">
+								</datalist></td>
+						</tr>
+           
+               			<tr>
+               			<td><input list="q1" id="q11" placeholder="Quality" style="max-width:70%" required> 
+								<datalist id="q1">
+				                    <option value="Premium">
+								    <option value="Standard">
+								    <option value="Other">
+                    			</datalist></td>
+                    	</tr>
+                   	</table>
+        		</form> 
+       		</div>
+    	</div>
+    	<div class="div7" onclick="validate_contactDetails();">
+            <ul>
+            	<li><a href="#" class="round green">Submit<span class="round"><strong>Representative from tilebazzar will contact you soon!!</strong></span></a></li>
+        	</ul> 
+        </div>
+    
+    <div class="div9" id="div9">
+        <form method="post" id="information">
+        	<table class="tag2">
+      			<tr>
+    				<td><span class="tag1"><label for="email">Email-ID :</label></span></td>
+		    		<td><input type="email" name="email" id="email"/></td>
+				</tr>
+            	<tr>
+             		<td><span class="tag1"> <label for="phone">Contact Number:</label></span></td>
+		    		<td><input type="tel" name="phone" id="phone"/></td>
+        		</tr>
+       		</table>
+        </form>
+   	</div>
+    <div class="div8" id="div8">
+        
+       <span class="title">Quick Inquiry</span>
+    </div>
+    </div>    
+   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
+    <script>
+     	var i=1;
+      	var a,b;
+      	var info = new Array();
+      	var j;
+      	var size;
+      	var product_Quality;
+      	var feel_finish;
+      	var quality;
+      	var label1;
+      	var label2;
+      	var label3;
+      	var label4;
+      	var text1;
+      	var text2;
+      	var text3;
+      	var text4;
+      	var div;
+      	var img;
+      	var c;
+      	var d;
+		
+		function validate_contactDetails()
+		{
+			var email = document.getElementById('email').value;
+			var atpos = email.indexOf('@');
+			var dotpos = email.lastIndexOf('.');
+
+			var number = document.getElementById('phone').value;
+			var phone_pattern = /^\d{10}$/;
+
+			var x,y;
+
+			if (email===""||number==="") 
+			{
+				alert('please Enter contact details so,that we can reach to you');
+			}
+			else
+			{	
+				if(atpos<1||dotpos<atpos+2||dotpos+2>atpos.length)
+				{	
+					alert('Not valid Email address, Please enter valid one');
+					
+				}
+				else
+				{
+					if (number.match(phone_pattern)) {
+						info_send();
+					}
+
+					else
+					{
+						alert('Not valid Contact number,please enter valid one');						
+					}	
+				}	
+			}	
+		}          
+        
+        function info_send()
+        {
+            var final_info=new Array();
+            for(var k=0;k<info.length;k++)
+            {
+                if(info[k]!=="null")
+                {
+                    var e=info[k];
+                    final_info.push(e);
+                    
+                }
+            }
+            console.log(final_info.toString());
+            var email_id=document.getElementById('email').value;
+            var phone_num=document.getElementById('phone').value;
+            console.log("Email-ID:"+email_id);
+            console.log("Phone_Number:"+phone_num);
+
+            document.getElementById('information').reset();
+
+            $('#div1').empty();
+            
+            
+ 
+        }
+              
+   		$('#div5').draggable({
+			revert: true,
+			stop: function () 
+			{
+				document.getElementById('f1').reset();
+			}
+		});
+   		
+   		$('.div1').droppable({
+			accept: '#div5',
+				drop: function()
+				{
+					size = document.getElementById('size1').value;
+					product_Quality = document.getElementById('pc1').value;
+					feel_finish = document.getElementById('ff1').value;
+					quality = document.getElementById('q11').value;
+			
+					if(size===""&&product_Quality===""&&feel_finish===""&&quality==="")
+                	{
+                    	alert("please fill atleast one field so that we can find solution for you");
+                	}
+            		else
+            		{
+                		info.push("Budget:"+size+" "+product_Quality+" "+feel_finish+" "+quality);
+                		//console.log(info.toString());
+                		
+                		label1 = document.createElement('label');
+						label2 = document.createElement('label');
+						label3 = document.createElement('label');
+						label4 = document.createElement('label');
+
+						text1 = document.createTextNode(size);
+						text2 = document.createTextNode(product_Quality);
+						text3 = document.createTextNode(feel_finish);
+						text4 = document.createTextNode(quality);
+
+						label1.appendChild(text1);
+						label1.appendChild(document.createElement("hr"));
+						label2.appendChild(text2);
+						label2.appendChild(document.createElement("hr"));
+						label3.appendChild(text3);
+						label3.appendChild(document.createElement("hr"));
+						label4.appendChild(text4);
+						label4.appendChild(document.createElement("hr"));
+
+						div = document.createElement('div');
+						div.setAttribute('class', 'note'+ i );
+						div.setAttribute('id','n'+i);
+						b  = 'n'+ i ;
+						//console.log(b)
+						document.getElementById('div1').appendChild(div);
+           
+						img = document.createElement('img');
+						img.setAttribute("src", "close.png");
+						img.setAttribute("width", "10px");
+						img.setAttribute("height","10px");
+						img.setAttribute("id","m"+i);
+            
+						document.getElementById(b).appendChild(img);
+						
+                        
+                        c = 'm'+i;
+                        document.getElementById(c).style.position = 'relative';
+						document.getElementById(c).style.cssFloat = 'right';
+						document.getElementById(c).style.marginRight = '3px';
+						document.getElementById(c).style.marginTop = '3px';
+       					
+       					document.getElementById(b).appendChild(label1);
+						document.getElementById(b).appendChild(label2);
+						document.getElementById(b).appendChild(label3);
+						document.getElementById(b).appendChild(label4);
+
+						document.getElementById(b).style.width = '100px';
+			            document.getElementById(b).style.margin='5px';
+						document.getElementById(b).style.height = '100px';
+			            document.getElementById(b).style.backgroundColor='#e3e3e3';
+						document.getElementById(b).style.borderRadius='10px';
+						document.getElementById(b).style.border = '3px solid #c2d4d8';
+						document.getElementById(b).style.fontSize = '9px';
+                        document.getElementById(b).style.fontFamily = 'Poiret One,cursive';
+						document.getElementById(b).style.float = 'left';
+                        		
+						i++;
+                
+                		$('#'+b).hover(function(){
+							$(this).css("width","200px");
+							$(this).css("height","200px");
+							$(this).css("font-size","16px");
+                            $('#'+g).css("height","20px");
+                            $('#'+g).css("width","200px");
+
+						},
+						function(){
+							$(this).css("width","100px");
+							$(this).css("height","100px");
+							$(this).css("font-size","9px");
+                          
+						});	
+			
+						$('img').click(function(){
+							a = this.id;
+							//console.log(a);
+							d = $(this).parent().attr('id');
+							//console.log(d);
+							$('#'+d).remove();
+            				j=a.charAt(1);
+            				info.splice(j-1,1,"null");
+            				//console.log(info.toString());
+						});
+            		}
+				}	
+			});
+    
+			$('.div2').droppable({
+				accept: '#div5',
+				drop: function()
+				{
+					size = document.getElementById('size1').value;
+					product_Quality = document.getElementById('pc1').value;
+					feel_finish = document.getElementById('ff1').value;
+					quality = document.getElementById('q11').value;
+			
+            		if(size===""&&product_Quality===""&&feel_finish===""&&quality==="")
+                	{
+                    	alert("please fill atleast one field so that we can find solution for you");
+                	}
+            		else
+            		{
+			
+			            info.push("Premium:"+size+" "+product_Quality+" "+feel_finish+" "+quality);
+			            //console.log(info.toString());
+          				
+          				label1 = document.createElement('label');
+						label2 = document.createElement('label');
+						label3 = document.createElement('label');
+						label4 = document.createElement('label');
+
+						text1 = document.createTextNode(size);
+						text2 = document.createTextNode(product_Quality);
+						text3 = document.createTextNode(feel_finish);
+						text4 = document.createTextNode(quality);
+
+						label1.appendChild(text1);
+						label1.appendChild(document.createElement("hr"));
+						label2.appendChild(text2);
+						label2.appendChild(document.createElement("hr"));
+						label3.appendChild(text3);
+						label3.appendChild(document.createElement("hr"));
+						label4.appendChild(text4);
+						label4.appendChild(document.createElement("hr"));
+						
+						div = document.createElement('div');
+						div.setAttribute('class', 'note'+ i );
+						div.setAttribute('id','n'+i);
+						b  = 'n'+ i ;
+						//console.log(b)
+						document.getElementById('div2').appendChild(div);
+           
+						img = document.createElement('img');
+						img.setAttribute("src", "close.png");
+						img.setAttribute("width", "10px");
+						img.setAttribute("height","10px");
+						img.setAttribute("id","m"+i);
+						document.getElementById(b).appendChild(img);
+                        
+                        
+
+						c = 'm'+i;
+						document.getElementById(c).style.position = 'relative';
+						document.getElementById(c).style.cssFloat = 'right';
+						document.getElementById(c).style.marginRight = '3px';
+						document.getElementById(c).style.marginTop = '3px';
+						
+						document.getElementById(b).appendChild(label1);
+						document.getElementById(b).appendChild(label2);
+						document.getElementById(b).appendChild(label3);
+						document.getElementById(b).appendChild(label4);
+
+						document.getElementById(b).style.width = '100px';
+			            document.getElementById(b).style.margin='5px';
+						document.getElementById(b).style.height = '100px';
+						document.getElementById(b).style.borderRadius='10px';
+			           	document.getElementById(b).style.backgroundColor='#e3e3e3';
+						document.getElementById(b).style.border = '3px solid #c2d4d8';
+                        document.getElementById(b).style.fontFamily = 'Poiret One,cursive';
+						document.getElementById(b).style.fontSize = '9px';
+						document.getElementById(b).style.float = 'left';
+						
+						i++;
+                		
+                		$('#'+b).hover(function(){
+							$(this).css("width","200px");
+							$(this).css("height","200px");
+							$(this).css("font-size","16px");
+                           
+
+						},
+						function(){
+							$(this).css("width","100px");
+							$(this).css("height","100px");
+							$(this).css("font-size","9px");
+                        	
+
+						});	
+			
+						$('img').click(function(){
+							a = this.id;
+							//console.log(a);
+							d = $(this).parent().attr('id');
+							//console.log(d);
+							$('#'+d).remove();
+              				j=a.charAt(1);
+            				info.splice(j-1,1,"null");
+            				//console.log(info.toString());
+            			});
+            		}
+				}	
+			});
+      
+       		$('.div3').droppable({
+				accept: '#div5',
+				drop: function()
+				{
+					size = document.getElementById('size1').value;
+					product_Quality = document.getElementById('pc1').value;
+					feel_finish = document.getElementById('ff1').value;
+					quality = document.getElementById('q11').value;
+			
+            		if(size===""&&product_Quality===""&&feel_finish===""&&quality==="")
+                	{
+                    	alert("please fill atleast one field so that we can find solution for you");
+                	}
+            		else
+            		{
+						info.push("HighEnd:"+size+" "+product_Quality+" "+feel_finish+" "+quality);
+                		//console.log(info.toString());
+          				
+          				label1 = document.createElement('label');
+						label2 = document.createElement('label');
+						label3 = document.createElement('label');
+						label4 = document.createElement('label');
+
+						text1 = document.createTextNode(size);
+						text2 = document.createTextNode(product_Quality);
+						text3 = document.createTextNode(feel_finish);
+						text4 = document.createTextNode(quality);
+
+						label1.appendChild(text1);
+						label1.appendChild(document.createElement("hr"));
+						label2.appendChild(text2);
+						label2.appendChild(document.createElement("hr"));
+						label3.appendChild(text3);
+						label3.appendChild(document.createElement("hr"));
+						label4.appendChild(text4);
+						label4.appendChild(document.createElement("hr"));
+
+						div = document.createElement('div');
+						div.setAttribute('class', 'note'+ i );
+						div.setAttribute('id','n'+i);
+						var b  = 'n'+ i ;
+						//console.log(b)
+						document.getElementById('div3').appendChild(div);
+           
+						img = document.createElement('img');
+						img.setAttribute("src", "close.png");
+						img.setAttribute("width", "10px");
+						img.setAttribute("height","10px");
+						img.setAttribute("id","m"+i);
+						document.getElementById(b).appendChild(img);
+						
+                                          
+						c = 'm'+i;
+						document.getElementById(c).style.position = 'relative';
+						document.getElementById(c).style.cssFloat = 'right';
+						document.getElementById(c).style.marginRight = '3px';
+						document.getElementById(c).style.marginTop = '3px';
+
+						document.getElementById(b).appendChild(label1);
+						document.getElementById(b).appendChild(label2);
+						document.getElementById(b).appendChild(label3);
+						document.getElementById(b).appendChild(label4);
+
+						document.getElementById(b).style.width = '100px';
+			            document.getElementById(b).style.margin='5px';
+						document.getElementById(b).style.height = '100px';
+						document.getElementById(b).style.borderRadius='10px';
+						document.getElementById(b).style.border = '3px solid #c2d4d8';
+			       		document.getElementById(b).style.backgroundColor='#e3e3e3';
+						document.getElementById(b).style.fontSize = '9px';
+                        document.getElementById(b).style.fontFamily = 'Poiret One,cursive';
+						document.getElementById(b).style.float = 'left';
+						
+						i++;
+                
+                		$('#'+b).hover(function(){
+							$(this).css("width","200px");
+							$(this).css("height","200px");
+							$(this).css("font-size","16px");
+                          
+
+						},
+						function(){
+							$(this).css("width","100px");
+							$(this).css("height","100px");
+							$(this).css("font-size","9px");
+                        
+
+						});	
+		
+						$('img').click(function(){
+							a = this.id;
+							//console.log(a);
+							d = $(this).parent().attr('id');
+							//console.log(d);
+							$('#'+d).remove();
+				            j=a.charAt(1);
+				            info.splice(j-1,1,"null");
+				            //console.log(info.toString());
+						});
+            		}
+				}	
+			});
+      
+     		$('.div4').droppable({
+				accept: '#div5',
+				drop: function()
+				{
+					size = document.getElementById('size1').value;
+					product_Quality = document.getElementById('pc1').value;
+					feel_finish = document.getElementById('ff1').value;
+					quality = document.getElementById('q11').value;
+			
+					if(size===""&&product_Quality===""&&feel_finish===""&&quality==="")
+                	{
+                    	alert("Please fill atleast one field so that we can find solution for you");
+                	}
+        			else
+            		{
+						info.push("Third Grade:"+size+" "+product_Quality+" "+feel_finish+" "+quality);
+			            //console.log(info.toString());
+          
+
+						label1 = document.createElement('label');
+						label2 = document.createElement('label');
+						label3 = document.createElement('label');
+						label4 = document.createElement('label');
+
+						text1 = document.createTextNode(size);
+						text2 = document.createTextNode(product_Quality);
+						text3 = document.createTextNode(feel_finish);
+						text4 = document.createTextNode(quality);
+
+						label1.appendChild(text1);
+						label1.appendChild(document.createElement("hr"));
+						label2.appendChild(text2);
+						label2.appendChild(document.createElement("hr"));
+						label3.appendChild(text3);
+						label3.appendChild(document.createElement("hr"));
+						label4.appendChild(text4);
+						label4.appendChild(document.createElement("hr"));
+						
+						div = document.createElement('div');
+						div.setAttribute('class', 'note'+ i );
+						div.setAttribute('id','n'+i);
+						var b  = 'n'+ i ;
+						//console.log(b)
+						document.getElementById('div4').appendChild(div);
+           
+						img = document.createElement('img');
+						img.setAttribute("src", "close.png");
+						img.setAttribute("width", "10px");
+						img.setAttribute("height","10px");
+						img.setAttribute("id","m"+i);
+						document.getElementById(b).appendChild(img);
+
+                      
+						c = 'm'+i;
+						document.getElementById(c).style.position = 'relative';
+						document.getElementById(c).style.cssFloat = 'right';
+						document.getElementById(c).style.marginRight = '3px';
+						document.getElementById(c).style.marginTop = '3px';
+			
+						document.getElementById(b).appendChild(label1);
+						document.getElementById(b).appendChild(label2);
+						document.getElementById(b).appendChild(label3);
+						document.getElementById(b).appendChild(label4);
+
+						document.getElementById(b).style.width = '100px';
+			            document.getElementById(b).style.margin='5px';
+						document.getElementById(b).style.height = '100px';
+						document.getElementById(b).style.borderRadius='10px';
+			     		document.getElementById(b).style.backgroundColor='#e3e3e3';
+						document.getElementById(b).style.border = '3px solid #c2d4d8';
+						document.getElementById(b).style.fontSize = '9px';
+                        document.getElementById(b).style.fontFamily = 'Poiret One,cursive';
+						document.getElementById(b).style.float = 'left';
+						
+						i++;
+				    	$('#'+b).hover(function(){
+							$(this).css("width","200px");
+							$(this).css("height","200px");
+							$(this).css("font-size","16px");
+                         
+						},
+						function(){
+							$(this).css("width","100px");
+							$(this).css("height","100px");
+							$(this).css("font-size","9px");
+                           	
+
+						});	        
+			
+						$('img').click(function(){
+							a = this.id;
+							//console.log(a);
+							var d = $(this).parent().attr('id');
+							//console.log(d);
+							$('#'+d).remove();
+					        j=a.charAt(1);
+					        info.splice(j-1,1,"null");
+					        //console.log(info.toString());
+						});
+            		}
+				}	
+			});
+    </script>        
+</body>
+</html>
